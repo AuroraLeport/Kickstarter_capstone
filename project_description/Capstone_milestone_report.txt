@@ -1,0 +1,87 @@
+Into:
+1. Problem: What kickstarter attributes influence a project's success or failure?
+            What is the predicted success rate of the proposed project given specific 
+            attributes?
+
+2. Client: Any person planning to submit and/or fund a kickstarter project @ kickstarter.com
+   Learnings: Clients will be made aware of the attributes correlated to the successful funding 
+   of a project and can make an informative decision on the attributes their project will have
+   based on that data.
+   
+A deeper dive:
+Important fields - 
+
+Data: WeRobots (https://webrobots.io/kickstarter-datasets/) has crawled the 
+Kickstarter.com website dumping all of the data into multiple CSV files. Data has been 
+collected on the 15th of every month from September to March 2016. Prior to this 
+data has been periodically collected approximately once every two months. Each row in the 
+CSV file represents a Kickstarter project, containing each projects attributes and outcome 
+since Kickstarter began back in 2009.
+    project count: 161,447
+    outcomes: successful, canceled, failed, live (i.e. outcome not yet resolved)
+
+Kickstarter attributes include: 
+    id
+    name (project name)
+    blurb about project
+    goal (min amount needed to create what kickstartee promised) 
+    pledged (money donated by backers)
+    state (successful, canceled, live, suspended)
+    slug
+    country
+    currency
+    currency_symbol
+    deadline (unix time)
+    state_changed (unix time)
+    created_at (unix time)
+    launched_at (unix time)
+    staff_pick
+    backers_count (number of backers)
+    usd_pledged (money donated by backers in USD)
+    location (country, state, city)
+    category (project category)
+    
+Limitations: ???
+
+Cleaning and Wrangling:
+Kickstarter attributes need to be cleaned. The attributes my project focuses on are:
+    1. Category name - The name is imbedded in a long URL and needs to be parsed.
+    Since there are 15 different categories, I will combine them into umbrella categories.
+    Later on, these categories will have to be converted into numerical values so as to perform
+    logistic regression.
+    so that each of those umbrella categories carries more weight when running log regression.
+    2. Goal amount in USD - goal amount needs to be converted to USD
+    3. Backer count - Clean
+    4. Blurb count - Words need to be counted
+    5. launched at date - needs to be converted to date/time index
+
+Other useful data sets?
+    I will be using the most recently scraped data (from Sept) to determine how well my 
+    model is performing. I.e I will look at the live datasets from older versions of the 
+    data and determine if my predictions align with what the outcome actually is. 
+
+Preliminary exploration:
+   - While projects since 2009 are available, only projects from the most recent years 
+    (2014 - 2016) will be analyzed. There are 2x as many projects from 
+    these years, indicating an inherent bias. The year the project was launched may have 
+    an effect on the projects. Therefore older projects are removed to limit biases. 
+   - There are three outcomes: Failed, Successful, Canceled and Suspended. As there are significantly
+     less projects in the Canceled and Suspended categories, power when analyzing
+     this categories will be significantly reduced comparatively to the other two. To limit
+     bias, I will focus my analyses on Failed and Successful categories only. 
+     
+Approach:
+    - As my predicted variables are categorical (Successful vs. Failed), I will use 
+    Logistic Regression to predict y. 
+    - In order to test efficacy of my model I will use both Cross Validation and Random 
+    Forests to determine the accuracy of my predictions.
+    - In order that the client can make an informed decision on which attributes they would
+    like to choose for their new project, I will provide them with the probability of an
+    outcome based on the category of their project, monetary goal, number of projected 
+    backers they will acquire and number of words they choose to have in their project description.
+    
+
+Code: https://github.com/AuroraLeport/Springboard/tree/master/Kickstarter_capstone   
+
+    
+

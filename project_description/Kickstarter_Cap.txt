@@ -1,0 +1,78 @@
+Kickstarter: Will your project be successful?
+
+1. Problem: Which kickstarter attributes hold the most weight when it comes to the project
+            succeeding or flopping?
+            What is the predicted success rate of the proposed project?
+
+2. Client: Any person planning to submit and/or fund a kickstarter @ kickstarter.com
+   Learnings: Clients will know which variables are correlated to successful funding 
+   of a project and base their decisions on that data.
+   
+3. Data: WeRobots (https://webrobots.io/kickstarter-datasets/) has crawled the 
+Kickstarter.com website and has dumped data into CSV files. 
+Data has been collected on the 15th of every month from July to March 2016. Prior to this 
+data has been periodically collected approximately once every two months.
+   Kickstarter variables include: 
+    id
+    name (project name)
+    blurb about project
+    goal (min amount needed to create what kickstartee promised) 
+    pledged (money donated by backers)
+    state (successful, canceled, live, suspended)
+    slug
+    country
+    currency
+    currency_symbol
+    deadline (unix time)
+    state_changed (unix time)
+    created_at (unix time)
+    launched_at (unix time)
+    staff_pick
+    backers_count (number of backers)
+    usd_pledged (money donated by backers in USD)
+    location (country, state, city)
+    category (project category)
+
+4. Approach: Determine which variables (e.g. name, category, backers, pledged, goal, # words 
+in blurb) are correlated to kickstarter state (i.e. success, suspended or canceled). 
+
+Determine the weight of these variables in terms of leading projects to their state. 
+Finally, predict a new project's state based on its unique variables.
+    - Test/train on randomized data. 80/20 split [1 out of 5] test [4 out of 5] train
+    How much is enough??
+    - Predict outcome of a subset of live projects.
+    - Determine accuracy of prediction once those live projects close.
+
+5. Deliverables: Python code and slide deck.
+    
+Questions:
+How do I determine how much data is useful to use? Each file is approx. a month worth
+of data w/ about 40 separate files totalling 800 MB
+ - Need enough success, suspended and canceled cases
+ 
+ limit data to past two years
+ select projects that started on same date
+ list of features that are desired
+ outline them
+ what will it take to grab them?
+ 4 features max
+ 
+ Heather has code for train/test to look at.
+ 
+ x4 variables that may have an effect on state of project:
+ - Category
+ - Number of backers
+ - # of words in blurb
+ - Goal amount
+ - Launched_at (give or take a weeks time)
+ - Amount pledged (could tell degree of success, but don't really need this variable)
+ 
+ - State_changed_at: date at which state was changed. launch date - state change 
+ would give you time to state change.
+ 
+ Want projects that were launched at the same time
+ and/or have same deadline
+ 
+ 
+ 15976962
+ 13049402

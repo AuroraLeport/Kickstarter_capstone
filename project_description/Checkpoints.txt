@@ -1,0 +1,97 @@
+Springboard Goals
+
+Week 1 Overview:
+Finish DataCamp’s Intermediate Python for Data Science
+1 section per week, 5 sections:
+1 Matplotlib M (complete)
+2 Dictionaries & Pandas T
+3 Logic, Control Flow and Filt W
+4 Loops Th
+5 Case Study: Hacker Statistics F
+
+Finish Git and Github introduction (complete)
+
+Finish Learn Python tutorial — http://www.learnpython.org/
+
+Finish section 3 Data Wrangling:
+3.1 Pandas Deep Dive T/W
+3.2 Data cleaning with Pandas and Working with data in files T/W
+3.3 Working with data in files Th/F
+3.4 Working with data in databases F/Sat/Sun
+
+Capstone: Choose idea and figure out what data to gather and how to gather it.
+
+— — — — — — 
+Checklist
+
+Week 1 Tue:
+Dictionaries & Pandas (complete)
+Learn Python tutorial Learn the Basics (complete)
+Research Fantasy Football recommendation system (complete)
+
+
+Week 1 Wed:
+Logic, Control Flow and Filtering
+Learn Python tutorial Advanced Tutorials (complete)
+Capstone figure out which data to collect (complete)
+pycon-pandas-tutorial: 1 (complete)
+
+Week 1 Thu:
+pycon-pandas-tutorial: 2 (complete) & 3 (complete) & 4 (complete)
+Data cleaning with Pandas (complete)
+Loops 
+
+Week 1 Fri:
+pycon-pandas-tutorial: 5 (complete) & 6
+Working with data in files
+Case Study: Hacker Statistics (complete)
+
+Week 1 Sat/Sun:
+Working with data in databases
+Submit your Capstone project proposal 
+
+— — — — — — 
+Week 2: Data Story + Capstone
+
+Week 2, Tuesday
+pycon-pandas-tutorial: 6 
+Working with data in files JSON (complete)
+
+Week 2, Wed:
+Working with data in files XML (complete)
+Submit your Capstone project proposal (complete)
+
+Week 2, Thu:
+Working with data in databases - Mode Analytics: Learn SQL Advanced
+Mode Analytics: Analytics Training
+Capstone (complete)
+
+Week 2, Fri:
+Capstone
+Overview of NoSQL databases (complete)
+
+Week2, Sat:
+Exploratory Data Analysis
+Capstone 2hr
+
+— — — — — — 
+Week 3, Monday:
+
+Working with dictionaries:
+appropriate splits train/test
+
+
+SECTION 5: 12hrs
+https://www.youtube.com/watch?v=5Vjrqnk7Igs
+https://github.com/allendowney/compstats
+
+Thu: EDA: Human Body Temperature
+Fri: EDA: Examine Racial Discrimination 
+Sat: EDA: Reduce Hospital Readmissions, 5.4, 5.5
+
+SECTION 7:
+Mon: Linear Regression Mini-Project: Boston Housing
+Tue: Logistic Regression: Heights and Weights
+Wed: Naive Bayes: Predicting movie ratings from reviews
+Thu: Clustering: Customer Segmentation
+

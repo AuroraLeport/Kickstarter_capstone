@@ -1,0 +1,76 @@
+X: feature = number of backers
+y: predicted = encoded state
+
+list of most important features in order of priority (up to 5)
+
+min/max scalar to continuous variables
+
+score: how well the model fits the data, relatively similar btw train and test
+want train and test to be relatively similar
+
+gradient boosting regression
+random forist
+
+
+
+_________
+
+# first i would make a dataframe with all features (called predictor_df)
+ 
+predictors = list(predictor_df.columns.values)
+
+# specify the number of features
+numfeat = len(predictors)
+
+# split the data into training/test sets...
+
+# test set:
+testing = dataset[0:len(dataset):5]
+
+# here my y-value was a continuous variable (bmi)
+Y_test = testing.bmi  
+X_test = testing[predictors]
+
+# training set:
+keep = testing['iid']
+training = dataset[~dataset['iid'].isin(keep)]
+Y_train = training.bmi
+X_train = training[predictors]
+
+#Now use the optimal model's parameters to run random forest
+crf = RandomForestClassifier(n_estimators=1000, max_features=numfeat, max_depth=5) 
+print("Parameters used in chosen RF model:\n " , crf.get_params())
+
+
+# Running Random Forest Regression
+
+crf.fit(X_train, Y_train)
+
+
+
+_________
+
+overfitting: https://medschool.vanderbilt.edu/cqs/files/cqs/media/2010Overfitting_0416.pdf
+http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html
+
+import scipy.stats as stats
+
+stats.normaltest(df.temperature)
+from scipy.stats import ttest_ind
+
+cat1 = females.temperature
+cat2 = males.temperature
+
+ttest_ind(cat1, cat2)
+
+train_score = crf.score(X_train, Y_train)
+
+print('crf training score is: %f' %(train_score))
+
+test_score = crf.score(X_test, Y_test)
+
+print('crf test score is: %f' %(test_score))
+
+________________________________________
+
+Ask about standardization of values across coefficients

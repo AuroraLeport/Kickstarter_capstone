@@ -1,0 +1,107 @@
+Capstone Project Ideas: 
+
+#1 Does the success of the stock market correlate with twitter sentiment? Can the stock 
+market be predicted based on sentiment and volume of tweets regarding a particular
+stock/subject/company? 
+
+Text classification: https://archive.ics.uci.edu/ml/datasets/Sentiment+Labelled+Sentences
+Stock Market data: https://www.quandl.com/3
+
+Skills: Web scraping, NLP, sentiment analysis, ML 
+
+#2 Inventory and recommendation system:
+Client wants to get a particular retail item today (for ease, I'll limit it to shampoo 
+products), 
+but does not know what store carries it (limited to three department stores: Planet Beauty,
+Target and CVS).
+Client inputs name of item into search engine.
+App will return store name and location that carries the item.
+If item does not exist, app will recommend an item like the one the client is looking for.
+Similarity could depend on: price, quality (star rating on amazon), popularity (twitter), 
+of product.
+
+Skills: Web scraping, NLP, ML
+
+#3 Correlation between minimum wage in CA and unemployment in CA given job type,
+race, gender, SES. 
+Predict rate of unemployment 1 year from now given continued minimum wage trend.
+data: http://www.bls.gov/data/ (Bureau of labor stats).
+http://www.bea.gov/national/index.htm (Bureau of economic analysis)
+
+Skills: ML
+
+#4 Fantasy Football recommendation system:
+Recommending player choices based on prior player performance and team stats.
+
+Web scraping
+ML
+statistics
+
+last years stats
+projection 
+traded
+starter/backup
+team?
+injury?
+
+rookies: how well they did during collage career
+
+info: blogs/ESPN rankings/
+
+fantasy pros .com
+
+12 people in league
+each person has a team
+draft 16 players
+1 qb, 2 wide receiver, 2 running back, 1 flex (rb or wr), 1 kicker, 1 tight end, 1 defence 
+7 bench 
+
+Can trade 
+Waver wire - drop and pick up others.
+13 weeks regular season 3 weeks playoffs
+
+pick players from all different teams to make own team.
+each week play against someone else in your league
+
+only include points for starting lineup not bench
+standings: wins and losses through week
+
+NFL teams play 1 game a week: Thu, Sun or Mon
+4 week teams will have one bye
+
+* range of rankers
+
+Bye week
+Best ranking
+Worst ranking
+AVG 1.3
+STD range
+
+Draft simulator
+research -- rb handcuffs (back up)
+
+websites: http://www.footballdb.com/fantasy-football/index.html?pos=RB&yr=2015&wk=2&rules=1
+https://www.fantasypros.com/nfl/rankings/consensus-cheatsheets.php
+
+#5 Determine which kickstarter projects are most popular and what may have lead to its
+populatirty:
+
+data: https://webrobots.io/kickstarter-datasets/
+
+variables: 
+category (source_url)
+country, city - state (location)
+usd_pledged
+number of backers - (backers_count) 
+currency
+pledged (money donated)
+goal (min amount needed to make what was promised)
+blurb
+name
+id
+deadline date (unix time)
+state_changed_at 
+created_at
+launched_at
+state (successful, canceled, live, suspended)
+
