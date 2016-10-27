@@ -33,11 +33,11 @@ determining the influence of the following attributes on a successful or failed 
     3. Goal in USD - amount of money needed to launch the project
     4. Project Category - Category the creative project falls into
     
-Independent (X) variables: attributes (see above)
+Independent (X) variables: attributes (see above),
 Dependent (y) variables: outcomes (i.e. success vs. fail)
 
 In order to evaluate the success of my model, I used 10-fold cross-validation. Since the  
-model performed well, I used it to predict the probability of success vs. failure using 
+model performed well (90% accuracy), I used it to predict the probability of success vs. failure using 
 live Kickstarter projects (i.e. projects whose outcome has not yet been determined). 
 Once an outcome was determined for those projects, I then compared
 my predicted outcome to the true outcome. Success rate of my model was determined by 
