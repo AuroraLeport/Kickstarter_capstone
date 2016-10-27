@@ -4,8 +4,8 @@ Kickstarter has reportedly received more than $1.9 billion in pledges from 9.4 m
 backers to fund 257,000 creative projects, such as films, music, stage shows, comics, 
 journalism, video games, technology and food-related projects.
 
-Goal: I want to determine which attributes lead to a successful or failed Kickstarter 
-project. Success is defined as achieving the monetary goal needed, via backers, to launch its project 
+Goal: Determine if a project will succeed or fail based on given attributes. 
+Success is defined as achieving the monetary goal needed, via backers, to launch its project 
 in the time allotted by Kickstarter. Furthermore, I would like to
 predict the percent likelihood of success or failure, based on a project's given attributes. 
 The goal is to increase a new project's chance of success by recommending which attributes
@@ -36,12 +36,13 @@ model performed well, I used it to predict the probability of success vs. failur
 live Kickstarter projects (i.e. projects whose outcome has not yet been determined). 
 Once an outcome was determined for those projects, I then compared
 my predicted outcome to the true outcome. Success rate of my model was determined by 
-comparing which of the predicted matched up with the true outcome.
+comparing the predicted outcome to the true outcome.
 
 Findings: My model predicted the outcome of 2700 Kickstarter projects with 83% accuracy. 
-I have determined there exists a positive relationship between backer-count and rate of
+I have determined there to be a positive relationship between backer-count and rate of
 success and a negative relationship between blurb count and success rate as well as
-monetary goal and success rate. The type of project does not influence the outcome much.
+a negative relationship between monetary goal and success rate. 
+The category of project does not influence the outcome much.
 
 Further research: Future research should aim to understand the specific timeframe
 that a particular amount of backers should be acquired to result in a successful outcome. 
