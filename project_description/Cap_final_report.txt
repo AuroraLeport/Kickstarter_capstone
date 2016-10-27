@@ -4,12 +4,12 @@ Kickstarter has reportedly received more than $1.9 billion in pledges from 9.4 m
 backers to fund 257,000 creative projects, such as films, music, stage shows, comics, 
 journalism, video games, technology and food-related projects.
 
-Goal: I want to determine which attributs lead to a successful or failed Kickstarter 
+Goal: I want to determine which attributes lead to a successful or failed Kickstarter 
 project. Success is defined as achieving the monetary goal needed, via backers, to launch its project 
 in the time allotted by Kickstarter. Furthermore, I would like to
 predict the percent likelihood of success or failure, based on a project's given attributes. 
 The goal is to increase a new project's chance of success by recommending which attributes
-their they should focus on when promoting their project. 
+their project should focus on. 
 
 Approach: WeRobots (https://webrobots.io/kickstarter-datasets/) has crawled the 
 Kickstarter.com website dumping all of the data into multiple 100MB CSV files. Data has been 
@@ -41,7 +41,7 @@ comparing which of the predicted matched up with the true outcome.
 Findings: My model predicted the outcome of 2700 Kickstarter projects with 83% accuracy. 
 I have determined there exists a positive relationship between backer-count and rate of
 success and a negative relationship between blurb count and success rate as well as
-monetary goal and success rate. The type of project does not influence the model much.
+monetary goal and success rate. The type of project does not influence the outcome much.
 
 Further research: Future research should aim to understand the specific timeframe
 that a particular amount of backers should be acquired to result in a successful outcome. 
